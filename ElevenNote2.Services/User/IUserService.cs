@@ -1,3 +1,5 @@
+using ElevenNote.Models.User;
+
 namespace ElevenNote2.Services.User;
 
 public interface IUserService

@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace ElevenNote.Models.User;
 
 public class UserRegister
@@ -10,6 +12,6 @@ public class UserRegister
     [Required, MinLength(4)]
     public string Password { get; set; } =string.Empty;
 
-    [Compare(nameof(password))]
+    [Compare(nameof(Password))]
     public string ConfirmPassword { get; set; } = string.Empty;
 }

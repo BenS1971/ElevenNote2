@@ -1,6 +1,6 @@
+using ElevenNote.Models.User;
 using ElevenNote2.Data;
 using ElevenNote2.Data.Entities;
-using ElevenNote2.Models.User;
 using Microsoft.AspNetCore.Identity;
 
 namespace ElevenNote2.Services.User;
@@ -41,7 +41,7 @@ public class UserService : IUserService
 
     private async Task<bool> CheckEmailAvailability(string email)
     {
-        UserEntity? existingUser await _userManager.FindByEmailAsync(email);
+        UserEntity? existingUser = await _userManager.FindByEmailAsync(email);
         return existingUser is null;
     }
 
